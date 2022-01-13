@@ -1,8 +1,8 @@
 name: Deploy
 # based on https://zellwk.com/blog/github-actions-deploy/
 # secrets.SSH_PRIVATE_KEY → server private SSH key
-# secrets.SSH_HOST → 
-# secrets.SSH_USER → SSH user
+# secrets.SSH_HOST → host IP address
+# secrets.SSH_USER → user
 
 on:
   push:
