@@ -1,0 +1,11 @@
+{
+  "htmlWhitespaceSensitivity": "ignore",
+  "plugins": [
+    "./node_modules/prettier-plugin-astro"
+  ],
+  "singleQuote": true,
+  "printWidth": 80,
+  "tabWidth": 2,
+  "useTabs": false,
+  "astroAllowShorthand": false
+}
