@@ -1,22 +1,6 @@
-// Test images:
-// alexander-hafemann-M-EwSRl8BK8-unsplash
-// annie-spratt-Tno1Zd3T6yY-unsplash
-// annie-spratt-v7DzvSEcNks-unsplash
-// bastien-herve-K791VrKGVf0-unsplash
-// daniil-silantev-JfAzBxcRbv4-unsplash
-// daniil-silantev-T9rEFLEji5I-unsplash
-// dylan-shaw-Y95DsVlJnls-unsplash
-// james-padolsey-OcQ1u1e1BJM-unsplash
-// kris-mikael-krister-E_6k5jKq7Jc-unsplash
-// maria-vojtovicova-b4RrGlaxP_8-unsplash
-// maria-vojtovicova-ektq1m_XM6c-unsplash
-// maria-vojtovicova-SPvJPDXEmqA-unsplash
-// maria-vojtovicova-YdzVifaWbFE-unsplash
-// nicolas-j-leclercq-va_nrBLonf8-unsplash
-// pascal-debrunner-eYOzdNjFfww-unsplash
-// saad-chaudhry-pM2Hpsi-Hxs-unsplash
-
 import React from 'react';
+
+import config from '../config/images.json';
 
 type Props = {
   src: string;
@@ -26,6 +10,7 @@ type Props = {
 };
 
 const widths = [128, 256, 384, 640, 750, 828, 1080, 1200, 1920, 2048, 3840];
+const originalSizes: Record<string, number[]> = config;
 
 const Picture = ({ src, ratio, sizes, lazy = true }: Props): JSX.Element => {
   const [w, h] = ratio !== 'original' ? ratio.split(':').map(i => +i) : [1, 1];
@@ -63,6 +48,8 @@ const Picture = ({ src, ratio, sizes, lazy = true }: Props): JSX.Element => {
           src={`/images/${src}_${w}_${h}_1200.jpeg`}
           srcSet={getSrcSet()}
           sizes={sizes}
+          width={ratio === 'original' ? originalSizes?.[src]?.[0] : w}
+          height={ratio === 'original' ? originalSizes?.[src]?.[1] : h}
         />
       </picture>
     </div>
