@@ -1,0 +1,234 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Picture from '../components/Picture.tsx';
+import Gallery from '../components/Gallery.tsx';
+let title = 'Images';
+---
+
+<BaseLayout title="title">
+  <article>
+    <div>
+      <div class="relative">
+        <Picture
+          src="james-padolsey-OcQ1u1e1BJM-unsplash"
+          ratio="original"
+          sizes="100vw"
+        />
+        <div class="absolute inset-0 bg-green-700 mix-blend-multiply"></div>
+        <div class="absolute inset-0 flex items-center justify-center">
+          <h1
+            class="font-serif text-4xl text-center text-white sm:text-5xl lg:text-6xl"
+          >
+            Performant and sustainable<br />rich content page
+          </h1>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="max-w-screen-sm px-3 mx-auto mt-6 prose prose-headings:font-serif prose-lead:text-2xl prose-p:text-lg"
+    >
+      <p>
+        <span class="lead">
+          This is an example of rich content, typically found on blogs and
+          marketing sites. It contains large images, JavaScript widgets (f.ex.
+          galleries), embeds, etc. So it can quickly become heavy and poorly
+          performant when it should be performing extremely well, even with bad
+          connections, because it is the main content of our websites. Feel free
+          to analyse this page.
+        </span>
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quem Tiberina
+        descensio festo illo die tanto gaudio affecit, quanto L. Nam de summo
+        mox, ut dixi, videbimus et ad id explicandum disputationem omnem
+        conferemus. Sed in rebus apertissimis nimium longi sumus. Graecum enim
+        hunc versum nostis omnes-: Suavis laborum est praeteritorum memoria.
+        Neque enim disputari <b>sine reprehensione nec cum iracundia</b> aut pertinacia
+        recte disputari potest. Quaesita enim virtus est, non quae relinqueret naturam,
+        sed quae tueretur.
+      </p>
+
+      <figure>
+        <Picture
+          src="dylan-shaw-Y95DsVlJnls-unsplash"
+          ratio="original"
+          sizes="(min-width: 680px) 616px, 94.44vw"
+        />
+        <figcaption>Normal width image © Dylan Shaw</figcaption>
+      </figure>
+
+      <p>
+        Minime vero istorum quidem, inquit. An hoc usque quaque, aliter in vita?
+        Suo enim quisque studio maxime ducitur. Innumerabilia dici possunt in
+        hanc sententiam, sed non necesse est.
+      </p>
+      <p>
+        Quis, quaeso, illum negat et bonum virum et comem et humanum fuisse?
+        Quid censes in Latino fore? Aliter homines, aliter philosophos loqui
+        putas oportere? Hoc positum in Phaedro a Platone probavit Epicurus
+        sensitque in omni disputatione id fieri oportere.
+      </p>
+      <p>
+        Bonum integritas corporis: misera debilitas. Quae qui non vident, nihil
+        umquam <b>magnum ac cognitione dignum amaverunt</b>. Paulum, cum regem
+        Persem captum adduceret, eodem flumine invectio? Non igitur bene. Certe,
+        nisi voluptatem tanti aestimaretis. Cupiditates non Epicuri divisione
+        finiebat, sed sua satietate.
+      </p>
+
+      <figure
+        class="relative flex flex-col items-center w-screen -translate-x-1/2 lg:-mx-60 lg:w-auto lg:translate-x-0 left-1/2 lg:static"
+      >
+        <div class="w-full">
+          <Picture
+            src="maria-vojtovicova-SPvJPDXEmqA-unsplash"
+            ratio="original"
+            sizes="(min-width: 1040px) 1096px, 100vw"
+          />
+        </div>
+        <figcaption class="w-full max-w-screen-sm px-3">
+          Large width image © Maria Vojtovicova
+        </figcaption>
+      </figure>
+
+      <p>
+        Cum autem in quo sapienter dicimus, id a primo rectissime dicitur. Mihi
+        enim erit isdem istis fortasse iam utendum. Hoc ille tuus non vult
+        omnibusque ex rebus voluptatem quasi mercedem exigit. Quae similitudo in
+        genere etiam humano apparet. Non autem hoc: igitur ne illud quidem. Non
+        modo carum sibi quemque, verum etiam vehementer carum esse? Ergo id est
+        convenienter naturae vivere, a natura discedere. Nos quidem Virtutes sic
+        natae sumus, ut tibi serviremus, aliud negotii nihil habemus.
+      </p>
+      <p>
+        Sin kakan malitiam dixisses, ad aliud nos unum certum vitium consuetudo
+        Latina traduceret. At iam decimum annum in spelunca iacet.
+      </p>
+      <p>
+        Quare attende, quaeso. Duo Reges: constructio interrete. Qui enim
+        voluptatem ipsam contemnunt, iis licet dicere se acupenserem maenae non
+        anteponere. <i>Nihil enim hoc</i> differt. Quid, de quo nulla dissensio est?
+        Sin dicit obscurari quaedam nec apparere, quia valde parva sint, nos quoque
+        concedimus; <b>Videamus animi partes</b>, quarum est conspectus
+        illustrior; Ne amores quidem sanctos a sapiente alienos esse
+        arbitrantur.
+      </p>
+
+      <figure>
+        <div class="aspect-w-8 aspect-h-7">
+          <div>
+            <Gallery
+              client:only="react"
+              images={[
+                'saad-chaudhry-pM2Hpsi-Hxs-unsplash',
+                'maria-vojtovicova-YdzVifaWbFE-unsplash',
+                'pascal-debrunner-eYOzdNjFfww-unsplash',
+                'daniil-silantev-T9rEFLEji5I-unsplash',
+                'maria-vojtovicova-SPvJPDXEmqA-unsplash',
+                'nicolas-j-leclercq-va_nrBLonf8-unsplash',
+              ]}
+            />
+          </div>
+        </div>
+        <figcaption>JavaScript widget - React Gallery</figcaption>
+      </figure>
+
+      <p>
+        Erat enim Polemonis. Ut proverbia non nulla veriora sint quam vestra
+        dogmata. Traditur, inquit, ab Epicuro ratio neglegendi doloris. Nonne
+        igitur tibi videntur, inquit, mala? Qui-vere falsone, quaerere
+        mittimus-dicitur oculis se privasse; Sed fac ista esse non inportuna;
+        Cum id fugiunt, re eadem defendunt, quae Peripatetici, verba.
+      </p>
+      <p>
+        Ita est quoddam commune officium sapientis et insipientis, ex quo
+        efficitur versari in iis, quae media dicamus. Nonne videmus quanta
+        perturbatio rerum omnium consequatur, quanta confusio? Sed quoniam et
+        advesperascit et mihi ad villam revertendum est, nunc quidem hactenus;
+        Huius ego nunc auctoritatem sequens idem faciam. Sin kakan malitiam
+        dixisses, ad aliud nos unum certum vitium consuetudo Latina traduceret.
+        Idemque diviserunt naturam hominis in animum et corpus.
+      </p>
+
+      <figure>
+        <div class="aspect-w-16 aspect-h-9">
+          <iframe
+            src="https://www.youtube.com/embed/R5l4MghKGEA"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          >
+          </iframe>
+        </div>
+        <figcaption>Youtube Embed - © Niko Juntunen</figcaption>
+      </figure>
+
+      <p>
+        Quamquam ab iis philosophiam et omnes ingenuas disciplinas habemus; Inde
+        sermone vario [redacted] illa a Dipylo stadia confecimus. Sed quae
+        tandem ista ratio est? Ut optime, secundum naturam affectum esse possit.
+        Quamquam ab iis <b>philosophiam et omnes ingenuas disciplinas</b> habemus;
+        Philosophi autem in suis lectulis plerumque moriuntur. Quid de Platone aut
+        de Democrito loquar? Tamen aberramus a proposito, et, ne longius, prorsus,
+        inquam, Piso, si ista mala sunt, placet.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Commentarios
+        quosdam, inquam, Aristotelios, quos hic sciebam esse, veni ut auferrem,
+        quos legerem, dum essem otiosus; Duo Reges: constructio interrete. Perge
+        porro; Hoc dixerit potius Ennius: Nimium boni est, cui nihil est mali.
+        Cur deinde Metrodori liberos commendas? Ita graviter et severe
+        voluptatem secrevit a bono.
+      </p>
+
+      <figure
+        class="relative flex flex-col items-center w-screen -translate-x-1/2 left-1/2"
+      >
+        <div class="w-full">
+          <Picture
+            src="annie-spratt-Tno1Zd3T6yY-unsplash"
+            ratio="original"
+            sizes="100vw"
+          />
+        </div>
+        <figcaption class="w-full max-w-screen-sm px-3">
+          Full width image © Annie Spratt
+        </figcaption>
+      </figure>
+
+      <p>
+        <b>
+          Huius, Lyco, oratione locuples, rebus ipsis ielunior. Praeterea
+          sublata cognitione
+        </b> et scientia tollitur omnis ratio et vitae degendae et rerum gerendarum.
+        Suam denique cuique naturam esse ad vivendum ducem. Quae cum ita sint, effectum
+        est nihil esse malum, quod turpe non sit. Eadem nunc mea adversum te oratio
+        est. At enim hic etiam dolore.
+      </p>
+      <p>
+        Quid, de quo nulla dissensio est? Miserum hominem! Si dolor summum malum
+        est, dici aliter non potest. Ita prorsus, inquam; Deprehensus omnem
+        poenam contemnet. Aliter enim nosmet ipsos nosse non possumus.
+        Familiares nostros, credo, Sironem dicis et Philodemum, cum optimos
+        viros, tum homines doctissimos. Hoc loco tenere se Triarius non potuit.
+        Praeteritis, inquit, gaudeo. Qui-vere falsone, quaerere mittimus-dicitur
+        oculis se privasse; Transfer idem ad modestiam vel temperantiam, quae
+        est moderatio cupiditatum rationi oboediens.
+      </p>
+      <p>
+        Atque his de rebus et splendida est eorum et illustris oratio. Quamvis
+        enim <b>
+          enim depravatae non sint, pravae tamen esse possunt. Si stante, hoc
+          natura videlicet vult, salvam esse se, quod concedimus; De hominibus
+          dici non necesse est enim
+        </b>. Iam doloris medicamenta illa Epicurea tamquam de narthecio
+        proment: Si gravis, brevis; Quamquam id quidem, infinitum est in hac
+        urbe; Itaque primos congressus copulationesque et consuetudinum
+        instituendarum voluntates fieri propter voluptatem; Scientiam
+        pollicentur, quam non erat mirum sapientiae cupido patria esse cariorem.
+      </p>
+    </div>
+  </article>
+</BaseLayout>
