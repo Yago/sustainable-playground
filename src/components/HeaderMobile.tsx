@@ -62,6 +62,8 @@ const HeaderMobile = ({ pathname }: Props): JSX.Element => {
                 className="block w-auto h-8 lg:hidden"
                 src="/assets/logo.svg"
                 alt="Workflow"
+                width="616"
+                height="67"
               />
             </div>
           </div>
