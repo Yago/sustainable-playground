@@ -15,8 +15,6 @@ const { title } = Astro.props;
 
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" href={Astro.resolve('../styles/global.css')} />
-
-    <link rel="preload" href="https://use.typekit.net/btr1wla.css" />
   </head>
   <body class="overflow-x-hidden">
     <main>
@@ -30,3 +28,7 @@ const { title } = Astro.props;
     </main>
   </body>
 </html>
+
+<style>
+  @import url('https://use.typekit.net/btr1wla.css');
+</style>
