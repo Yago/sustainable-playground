@@ -63,6 +63,8 @@ const Picture = ({ src, ratio, sizes, lazy = true }: Props): JSX.Element => {
           src={`/images/${src}_${w}_${h}_1200.jpeg`}
           srcSet={getSrcSet()}
           sizes={sizes}
+          width={ratio !== 'original' ? w : undefined}
+          height={ratio !== 'original' ? h : undefined}
         />
       </picture>
     </div>
