@@ -22,11 +22,12 @@ type Props = {
   src: string;
   ratio: '16:9' | 'original';
   sizes: string;
+  lazy: boolean;
 };
 
 const widths = [128, 256, 384, 640, 750, 828, 1080, 1200, 1920, 2048, 3840];
 
-const Picture = ({ src, ratio, sizes }: Props): JSX.Element => {
+const Picture = ({ src, ratio, sizes, lazy = true }: Props): JSX.Element => {
   const [w, h] = ratio !== 'original' ? ratio.split(':').map(i => +i) : [1, 1];
   const getSrcSet = (format = 'jpeg'): string =>
     widths
@@ -54,7 +55,7 @@ const Picture = ({ src, ratio, sizes }: Props): JSX.Element => {
           />
         ))}
         <img
-          loading="lazy"
+          loading={lazy ? 'lazy' : 'eager'}
           className="w-full my-0"
           alt={`Unsplash photograph by ${src
             .replace(/-.{11}-unsplash$$/g, '')
