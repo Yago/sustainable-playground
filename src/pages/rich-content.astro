@@ -17,9 +17,11 @@ let title = 'Images';
           lazy={false}
         />
         <div class="absolute inset-0 bg-green-700 mix-blend-multiply"></div>
-        <div class="absolute inset-0 flex items-center justify-center">
+        <div
+          class="absolute inset-0 flex items-center justify-center print:static print:mt-12"
+        >
           <h1
-            class="font-serif text-4xl text-center text-white sm:text-5xl lg:text-6xl"
+            class="font-serif text-4xl text-center text-white print:text-black sm:text-5xl lg:text-6xl"
           >
             Performant and sustainable<br />rich content page
           </h1>
@@ -153,7 +155,7 @@ let title = 'Images';
         Idemque diviserunt naturam hominis in animum et corpus.
       </p>
 
-      <figure>
+      <figure class="print:hidden">
         <div class="aspect-w-16 aspect-h-9">
           <Youtube
             client:visible

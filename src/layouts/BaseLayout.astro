@@ -20,8 +20,11 @@ const { title } = Astro.props;
   </head>
   <body class="overflow-x-hidden">
     <main>
-      <Header pathname={url.pathname} />
-      <HeaderMobile client:media="(max-width:640px)" pathname={url.pathname} />
+      <div class="print:hidden">
+        <Header pathname={url.pathname} />
+        <HeaderMobile client:media="(max-width:640px)" pathname={url.pathname}
+        />
+      </div>
       <slot />
       <Footer />
     </main>
