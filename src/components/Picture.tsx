@@ -56,15 +56,13 @@ const Picture = ({ src, ratio, sizes, lazy = true }: Props): JSX.Element => {
         ))}
         <img
           loading={lazy ? 'lazy' : 'eager'}
-          className="w-full my-0"
+          className="w-full h-auto my-0"
           alt={`Unsplash photograph by ${src
             .replace(/-.{11}-unsplash$$/g, '')
             .replace('-', ' ')}`}
           src={`/images/${src}_${w}_${h}_1200.jpeg`}
           srcSet={getSrcSet()}
           sizes={sizes}
-          width={ratio !== 'original' ? w : undefined}
-          height={ratio !== 'original' ? h : undefined}
         />
       </picture>
     </div>
