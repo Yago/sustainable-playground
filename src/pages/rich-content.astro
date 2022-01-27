@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Picture from '../components/Picture.tsx';
 import Gallery from '../components/Gallery.tsx';
+import Youtube from '../components/Youtube.astro';
 let title = 'Images';
 ---
 
@@ -153,14 +154,11 @@ let title = 'Images';
 
       <figure>
         <div class="aspect-w-16 aspect-h-9">
-          <iframe
-            src="https://www.youtube.com/embed/R5l4MghKGEA"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          >
-          </iframe>
+          <Youtube
+            client:visible
+            id="R5l4MghKGEA"
+            title="Winter Wonderland Finland"
+          />
         </div>
         <figcaption>Youtube Embed - © Niko Juntunen</figcaption>
       </figure>
