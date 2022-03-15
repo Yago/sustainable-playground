@@ -58,13 +58,15 @@ const HeaderMobile = ({ pathname }: Props): JSX.Element => {
           </div>
           <div className="flex items-center justify-center flex-1 sm:items-stretch sm:justify-between">
             <div className="flex items-center flex-shrink-0">
-              <img
-                className="block w-auto h-8 lg:hidden"
-                src="/assets/logo.svg"
-                alt="Workflow"
-                width="616"
-                height="67"
-              />
+              <a href="/">
+                <img
+                  className="block w-auto h-8 lg:hidden"
+                  src="/assets/logo.svg"
+                  alt="Workflow"
+                  width="616"
+                  height="67"
+                />
+              </a>
             </div>
           </div>
         </div>
@@ -73,8 +75,10 @@ const HeaderMobile = ({ pathname }: Props): JSX.Element => {
       <div className={open() ? 'sm:hidden' : 'hidden'} id="mobile-menu">
         <div className="pt-2 pb-4 space-y-1">
           {[
-            ['Home', '/'],
+            ['Welcome', '/'],
+            ['Homepage', '/homepage'],
             ['Rich Content', '/rich-content'],
+            ['Checklist', '/checklist'],
           ].map(([label, path]) => (
             <a
               href={path}

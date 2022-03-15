@@ -1,0 +1,38 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import items from '../config/checklist.json';
+let title = 'Sustainable website checklist';
+---
+
+<BaseLayout title={title}>
+  <div class="max-w-screen-sm px-3 mx-auto my-20">
+    <h1 class="font-serif text-4xl">{title}</h1>
+
+    <fieldset class="border-t border-b border-gray-200 mt-12">
+      <legend class="sr-only">Notifications</legend>
+      <div class="divide-y divide-gray-200">
+        {items.map(({ id, title, desc }) => (
+          <div class="relative flex items-start py-4">
+            <div class="min-w-0 flex-1">
+              <label for={id} class="font-bold text-xl text-gray-700">
+                {title}
+              </label>
+              <p id={`${id}-description`} class="text-gray-500">
+                {desc}
+              </p>
+            </div>
+            <div class="ml-3 flex items-center h-5 mt-2">
+              <input
+                id={id}
+                aria-describedby={`${id}-description`}
+                name={id}
+                type="checkbox"
+                class="focus:ring-indigo-500 h-5 w-5 text-indigo-600 border-gray-300 rounded"
+              />
+            </div>
+          </div>
+        ))}
+      </div>
+    </fieldset>
+  </div>
+</BaseLayout>

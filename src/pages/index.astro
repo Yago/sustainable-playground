@@ -1,9 +1,37 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Tour from '../components/Tour.astro';
-let title = 'My Astro Site';
+let title = 'Sustainable Playground';
 ---
 
 <BaseLayout title={title}>
-  <Tour />
+  <div class="max-w-screen-sm px-3 mx-auto my-20">
+    <h1 class="font-serif text-3xl">
+      Welcome on this fresh web sustainability playground!
+    </h1>
+
+    <div
+      class="prose prose-headings:font-serif prose-lead:text-2xl prose-p:text-lg mt-6"
+    >
+      <p class="lead">
+        There is not much to see for the moment, but you can already check:
+      </p>
+
+      <ul class="list-disc">
+        <li>
+          A performant (Lighthouse 100) <a href="/rich-content">
+            rich content page
+          </a>
+        </li>
+        <li>
+          A <a href="/checklist">sustainable website checklist</a> to help you check
+          your own project
+        </li>
+      </ul>
+    </div>
+    <img
+      src="/assets/homepage-vector.svg"
+      class="mt-12"
+      alt="Illustration of a seagull, a polar bear, the planet Earth and a thermometer."
+    />
+  </div>
 </BaseLayout>

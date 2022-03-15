@@ -1,0 +1,72 @@
+[
+  {
+    "id": "honesty",
+    "title": "Honesty",
+    "desc": "My website is telling only the truth, no belief and behaviours intentional manipulation."
+  },
+  {
+    "id": "regeneration",
+    "title": "Regeneration",
+    "desc": "My website provide direct or indirect regeneration; carbon offsetting, reforestation, etc."
+  },
+  {
+    "id": "resilience",
+    "title": "Resilience",
+    "desc": "My website can be accessed in inconsistent and slow connection."
+  },
+  {
+    "id": "energy",
+    "title": "Energy",
+    "desc": "My website is using green hosting, caching and optimised geographical distribution."
+  },
+  {
+    "id": "efficiency",
+    "title": "Efficiency",
+    "desc": "My website has CPU and GPU optimised usage; no unnecessary process or motion."
+  },
+  {
+    "id": "seo",
+    "title": "SEO",
+    "desc": "My website has holistic content management and constant global review."
+  },
+  {
+    "id": "bots",
+    "title": "Bots",
+    "desc": "My website block unwanted bots."
+  },
+  {
+    "id": "branding",
+    "title": "Branding",
+    "desc": "My website prefers dark with less blue."
+  },
+  {
+    "id": "uxui",
+    "title": "UX/UI",
+    "desc": "My website reduces as much as possible users journey length."
+  },
+  {
+    "id": "technology",
+    "title": "Technology",
+    "desc": "My website uses open-source, energy efficient, languages and frameworks."
+  },
+  {
+    "id": "typography",
+    "title": "Typography",
+    "desc": "My website uses WOFF2 optimised font and/or variable fonts."
+  },
+  {
+    "id": "images",
+    "title": "Images",
+    "desc": "My website uses vector image first, bitmap images second, with AVIF/WebP and optimisation methods (resolution, compression, blur, etc)."
+  },
+  {
+    "id": "video",
+    "title": "Video",
+    "desc": "My website avoids unnecessary and autoplay videos."
+  },
+  {
+    "id": "simplicity",
+    "title": "Simplicity",
+    "desc": "Everything on my website is necessary (KISS)."
+  }
+]
