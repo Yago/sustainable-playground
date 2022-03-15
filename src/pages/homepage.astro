@@ -154,17 +154,7 @@ const r = () => Math.floor(Math.random() * (2 - 0 + 1));
               </a>
             </div>
             <div class="mt-6 flex items-center">
-              <div class="flex-shrink-0">
-                <a href={posts[r()].author.href}>
-                  <span class="sr-only">{posts[r()].author.name}</span>
-                  <img
-                    class="h-10 w-10 rounded-full"
-                    src={posts[r()].author.imageUrl}
-                    alt=""
-                  />
-                </a>
-              </div>
-              <div class="ml-3">
+              <div>
                 <p class="text-sm font-medium text-gray-900">
                   <a href={posts[r()].author.href} class="hover:underline">
                     {posts[r()].author.name}
