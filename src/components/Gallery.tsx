@@ -1,7 +1,7 @@
 import React from 'react';
-import lgThumbnail from 'lightgallery/plugins/thumbnail';
-import lgZoom from 'lightgallery/plugins/zoom';
-import LightGallery from 'lightgallery/react';
+import lgThumbnail from 'lightgallery/plugins/thumbnail/lg-thumbnail.es5';
+import lgZoom from 'lightgallery/plugins/zoom/lg-zoom.es5';
+import LightGallery from 'lightgallery/react/Lightgallery.es5';
 
 import Picture from './Picture';
 
@@ -35,6 +35,7 @@ const Gallery = ({ images }: Props): JSX.Element => {
               src={image}
               ratio="16:9"
               sizes="(min-width: 680px) 304px, calc(47.22vw - 8px)"
+              lazy
             />
           </a>
         ))}
