@@ -1,5 +1,5 @@
 ---
-const { pathname } = Astro.props;
+const { pathname } = new URL(Astro.request.url);
 ---
 
 <nav class="bg-white shadow hidden sm:block">

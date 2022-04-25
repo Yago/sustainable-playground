@@ -5,7 +5,7 @@ import HeaderMobile from '../components/HeaderMobile.tsx';
 
 import '../styles/global.css';
 
-const { url } = Astro.request;
+const url = new URL(Astro.request.url);
 const { title } = Astro.props;
 ---
 
