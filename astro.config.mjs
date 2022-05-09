@@ -15,6 +15,6 @@ export default {
     sitemap(),
   ],
   vite: {
-    plugins: [VitePWA({})]
+    plugins: [VitePWA()]
   },
 };
